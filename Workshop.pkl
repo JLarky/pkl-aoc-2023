@@ -1,0 +1,23 @@
+module Workshop
+import "workshop2023.pkl"
+
+import "TutorialPart.pkl"
+
+title: String
+
+interactive: Boolean
+
+seats: Int
+
+occupancy: Float
+
+duration: Duration
+
+`abstract`: String
+
+
+instructors: Listing<String>
+
+assistants: Mapping<String, String>
+
+agenda: Mapping<String, TutorialPart>

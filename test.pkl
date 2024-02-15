@@ -1,0 +1,21 @@
+// Single-line comment
+
+hidden add = (a: String, b: Number) -> a + b.toString()
+hidden countDown = (num: Number) -> if (num > 0) num.toString() + "..." + countDown.apply(num - 1) else "0"
+hidden factorial = (num: Number) -> if (num > 0) num.toString() + "..." + countDown.apply(num - 1) else "0"
+hidden fib = (num: Number) -> if (num == 0) 0 else if (num > 0) fib.apply(num - 1) + fib.apply(num - 2) else 1
+hidden const isFibChecker = (num: Number, prev: Number, curr: Number) -> if (curr < num) isFibChecker.apply(num, curr, prev + curr) else curr == num
+hidden const isFib = (num: Number) -> isFibChecker.apply(num, 0, 1)
+
+class Language { 
+  name: String
+//   name: String(isFib, length.isOdd, chars.first == chars.last)
+  port: Number(isFib)
+}
+
+/// My thing
+species: Language = new {
+    // name = add.apply(read?("env:PUBLIC_TERM") ?? "", 5)
+    name = countDown.apply(10).toString()
+    port = 832041 // fib.apply(30)
+}

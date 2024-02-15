@@ -1,0 +1,5 @@
+module Templ
+
+import "test.pkl"
+
+name: Language = "test"

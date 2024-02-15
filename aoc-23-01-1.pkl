@@ -1,0 +1,15 @@
+local digits = "0123456789"
+
+function getFirstNumber(s, currPos) = if (digits.contains(s[currPos])) s[currPos] else getFirstNumber(s, currPos + 1)
+function getLastNumber(s, currPos) = if (digits.contains(s[currPos])) s[currPos] else getLastNumber(s, currPos - 1)
+
+function getNumber(s) = (getFirstNumber(s, 0) + getLastNumber(s, s.length - 1)).toInt()
+
+aoc {
+  example_01 = read("file:aoc-23-01-1.txt").text.split("\n").map((x) -> getNumber(x)).fold(0, (x, y) -> x + y)
+  answer = read("file:aoc-23-01-1-real.txt").text.split("\n").map((x) -> getNumber(x)).fold(0, (x, y) -> x + y)
+}
+
+// output {
+//   value = aoc.answer
+// }
